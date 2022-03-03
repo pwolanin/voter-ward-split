@@ -33,7 +33,7 @@ Import all the csv files into a sqlite3 database.
 
 ```
 DB="sqlite3 $DATE-PA-Voter-Export.sqlite3"
-for FILE in *.csv; do echo ".mode csv
+for FILE in $DATE-PA-Voter-Export-*.csv; do echo ".mode csv
 .head on
 .import $FILE voter_list" | $DB; done
 ```
